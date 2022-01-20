@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Argentum FORO</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!--FONT AWESOME.-->
     <script src="https://kit.fontawesome.com/fe17a749eb.js" crossorigin="anonymous"></script>
-
-    
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fe17a749eb.js" crossorigin="anonymous"></script>
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--FONT AWESOME.-->
-<script src="https://kit.fontawesome.com/fe17a749eb.js" crossorigin="anonymous"></script>
     <!--BOOTSTRAP.-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-   
+
+    <!--CSS PERSONALITY.-->
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
@@ -55,19 +53,13 @@
                     <option value="reportes">Reportes en denuncias/quejas</option>
                     <option value="novedades">Staff</option>
                     <option value="ventas">Descargas</option>
-
-
                 </select>
 
                 <input type="text" name="q" id="" placeholder="Buscar...">
                 <button><i class="fa fa-search"></i></button>
             </div>
-
         </div>
-
     </header>
-
-
     <!--Navigationn##################-->
     <div class="navigate">
         <span><a href="#">My Forum - Forum >> </a><a href="#"></a><a href="#">Topical Forum </a><a href="#">Random
@@ -79,7 +71,6 @@
             <div class="authors">Author</div>
             <div class="content">Topic:post's tittle (Read1212 Times) </div>
         </div>
-
         <div class="body">
             <div class="authors">
                 <div class="username"><a href="#">Username</a></div>
@@ -96,26 +87,21 @@
                 <br><br>
                 <hr>
                 Regards Username
-
                 <div class="comment">
                     <button onclick="showComment()">Comment</button>
                 </div>
             </div>
         </div>
+        <!--Comments-->
+        <div class="comment-area hide" id="comment-area">
+            <textarea name="comment" id="" placeholder="Dejá tu comentario"></textarea>
+            <input type="submit" name="" id="" value="Comentar.">
+            <input type="submit" name="" id="" value="Cancelar.">
 
-<!--Comments-->
-<div class="comment-area hide" id="comment-area">
-    <textarea name="comment" id="" placeholder="Dejá tu comentario"></textarea>
-    <input type="submit" name="" id="" value="Comentar.">
-    <input type="submit" name="" id="" value="Cancelar.">
-
-</div>
+        </div>
 
     </div>
-
-
     <!--Reply comments-->
-
     <div class="comments-container">
         <div class="head">
             <div class="authors">Author</div>
@@ -138,44 +124,36 @@
                 <br><br>
                 <hr>
                 I don't know what put here XD
-
-                <div class="comment" >
+                <div class="comment">
                     <button onclick="showReply()">Reply</button>
-                    
                 </div>
             </div>
         </div>
 
 
-        
-<!--Reply Comments-->
-<div class="comment-area hide" id="reply-area">
-    <textarea name="comment" id="" placeholder="Responder"></textarea>
-    <input type="submit" name="" id=""  value="Comentar">
-    <input type="submit" name="" id="cancelar" value="Cancelar">
 
-</div>
-<br>
+        <!--Reply Comments-->
+        <div class="comment-area hide" id="reply-area">
+            <textarea name="comment" id="" placeholder="Responder"></textarea>
+            <input type="submit" name="" id="" value="Comentar">
+            <input type="submit" name="" id="cancelar" value="Cancelar">
+        </div>
+        <br>
+        <footer>
+            <span>&copy; Hernán fleitas | Todos los derechos reservados.</span>
 
+            <span>
+                <h4>Seguinos en nuestras redes sociales!</h4>
+                <div class="social">
 
-    
+                    <a class="bi bi-instagram" href="https://www.instagram.com/hernifleitas/">Instagram.</a>
+                    <a class="bi bi-facebook"
+                        href="https://www.facebook.com/Tierras-del-delirio-130-oficial-345246776306949">Facebook.</a>
+                    <a class="bi bi-discord" href="">Discord</a>
 
-
-<footer>
-    <span>&copy;  Hernán fleitas | Todos los derechos reservados.</span>
-
-    <span>
-        <h4>Seguinos en nuestras redes sociales!</h4>
-        <div class="social">
-                 
-            <a class="bi bi-instagram" href="https://www.instagram.com/hernifleitas/">Instagram.</a>
-            <a class="bi bi-facebook" href="https://www.facebook.com/Tierras-del-delirio-130-oficial-345246776306949">Facebook.</a>
-            <a class="bi bi-discord" href="">Discord</a>
-            
-         </div>
-    </span>
-</footer>
-    <script src="script.js"></script>
+                </div>
+            </span>
+        </footer>
+        <script src="script.js"></script>
 </body>
-
 </html>
