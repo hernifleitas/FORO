@@ -193,7 +193,7 @@ margin: 4px;
 .brand {
     font-size: 40px;
     display: inline-block;
-    font-family: 'Bangers', cursive;
+    font-family:serif
     
 }
 
@@ -246,9 +246,13 @@ margin: 4px;
 }
 .body .authors .username{
     font-size: 15px;
-
+    
 }
 
+.body .authors .username:hover{
+    border-bottom: 1px solid #2c2c2c;
+
+}
 
 .body img {
     max-width:60px;
@@ -282,6 +286,7 @@ margin: 4px;
     min-height: 100px;
     padding: 10px;
     margin-block: 10px;
+    font-family:serif;
     background-color:rgba(255, 255, 255, 0.212);
     color: #fff;
 
@@ -522,7 +527,6 @@ display: block;
 /*###########################*/
 /*Responsive desing.*/
 
-
 @media screen and (max-width:490) {
     .search-box input, .search-box button, .search-box select {
         min-width: 200px;
@@ -576,7 +580,7 @@ display: block;
 /*navbar for smartPhones*/
 
 
-@media screen and (max-width:490px) {
+@media screen and (max-width:520px) {
 
     .navigation{
        max-height: 250px;
@@ -628,7 +632,18 @@ display: block;
 
 }
 
+@media screen and (max-width:390px) {
+    footer  {
+       display: flex;
+       flex-direction: column;
+    }
 
+    footer .social a{
+        display: block;
+        
+        
+    }
+}
 
 @media screen and (max-width:620px) {
 

@@ -21,7 +21,8 @@ function showIconBar() {
 
 function showComment() {
     let commentArea = document.getElementById("comment-area");
-    commentArea.setAttribute("style", "display:block")
+    commentArea.setAttribute("style", "display:block");
+    
 }
 
 function showReply() {
