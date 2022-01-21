@@ -23,3 +23,6 @@ module.exports = { helloUser, pruebaHerni };
 // mensaje de lo que haces y por ultimo
 // git push origin laramaque creas
 // ahi te muestro todo y esto se sube al git
+// ahora voy a git y pongo los cambios
+// elimino la rama
+// y hago el pull
