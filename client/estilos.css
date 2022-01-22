@@ -282,12 +282,12 @@ border-bottom: 1px solid #2c2c2c;
 
 /*search-box*/
 .search-box{
-    border:solid 1px #52057b;
+    border:solid 1px #7b0505;
     margin-top: 20px;
     padding: 40px;
     display: flex;
-    justify-content: center;
-    box-shadow:1px 2px 3px #52075b ;
+    justify-content: right;
+    box-shadow:1px 2px 3px #b9210d ;
 }
 
 .search-box select{
@@ -338,6 +338,17 @@ footer {
 }
 footer .redes i {
     background: #fff;
+}
+
+.iconos-social {
+    
+    display: inline-block;
+  
+
+}
+.iconos-social:hover {
+    transform: translateY(-4px);
+    transition: all 0.2s;
 }
 footer a {
     color: #FEFEFE;
@@ -443,6 +454,15 @@ display: block;
 
 /*About us.*/
 
+.container-card{
+    display: flex;
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+
 .container-about p{
     color: #fff;
     border-radius:10px; 
@@ -511,14 +531,17 @@ img {
 .cards {
 
   text-align: center;
+  display: flex;
+  width: 300px; 
+  height: auto;
+  background-color:#292b2e;
   border: solid 1px #292b2e;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
  
  
   
-}
-
-.text{ 
-    background-color: rgba(255, 255, 255, 0.048);
 }
 
 .staff {
@@ -571,6 +594,24 @@ img {
     }
 }
 
+@media screen and (max-width:590px){
+
+    .navigation{
+       max-height: 250px;
+    }
+    .nav-iten {
+        display: flex;
+    }
+    .nav-iten a {
+        float: left;
+        display: inline;
+        text-align: center;
+        margin-inline: 3px;
+        font-size: 20px;
+        padding: 5px; 
+    }
+
+}
 
 /*navbar for smartPhones*/
 
@@ -620,6 +661,30 @@ img {
         display: block;
     }
 }
+
+
+
+/*#################*/
+/*REsponsive 770 */
+
+
+@media screen and (max-width:770px) {
+    .navigation{
+      max-height: auto;
+    } 
+    .nav-iten a {
+        float: left;
+        display: inline;
+        text-align: center;
+        margin-inline: 3px;
+        font-size: 20px;
+        padding: 5px;
+    }
+    .close-icon{
+        font-size: 20px;
+    }
+ }
+
 
 @media screen and (max-width:620px) {
     .navigation{
