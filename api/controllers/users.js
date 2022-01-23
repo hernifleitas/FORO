@@ -1,17 +1,29 @@
-const helloUser = (request, response) => {
-  response.json({ msj: "Hello world" });
+const { User } = require("../db");
+const bcrypt = require("bcrypt");
+const salt = 10;
+
+const createUser = async (req, res) => {
+  try {
+    const { email, username, password } = req.body;
+    const pswHash = await bcrypt.hash(password, salt);
+
+    const [user, created] = await User.findOrCreate({
+      where: { email },
+      defaults: { username, password: pswHash },
+      attributes: { exclude: ["password"] },
+    });
+
+    if (created) {
+      res.json({ msj: "User created successfully!" });
+    } else {
+      res.json({ msj: "There is already a user with that email!", ...user });
+    }
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-const pruebaHerni = (req, res) => {
-  // aca request y response se abrevia para hacerlo mas rapido
-  const { nombre } = req.body;
-  //voy a cambiarlo
-  const mensaje = `Mi nombre es ${nombre}`;
-  //esto es ES6
-  res.json({ mensaje });
-};
-
-module.exports = { helloUser, pruebaHerni };
+module.exports = { createUser };
 
 // te muestro, igual en el chat quedo
 // primero trabajas en el codigo como estoy haciendo ahora .
