@@ -1,4 +1,10 @@
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
+const { Sequelize, Op } = require("sequelize");
+
+//importamos los modelos
+const modelUser = require("../models/User");
+const modelPost = require("../models/publication");
+const modelComment = require("../models/comment");
 
 /* eslint-disable */
 const sequelize =
@@ -34,3 +40,24 @@ const sequelize =
       );
 
 // Injectamos la conexion (sequelize) a todos los modelos
+modelUser(sequelize);
+modelPost(sequelize);
+modelComment(sequelize);
+
+//crean las varaibles con los modelos
+const { User, Post, Comment } = sequelize.models;
+// se crean las relaciones de los modelos
+User.hasMany(Post, { foreignKey: "id_user_post" });
+Post.belongsTo(User, { foreignKey: "id_user_post" });
+
+User.hasMany(Comment, { foreignKey: "id_user_comment" });
+Comment.belongsTo(User, { foreignKey: "id_user_comment" });
+
+Post.hasMany(Comment, { foreignKey: "id_post_comment" });
+Comment.belongsTo(Post, { foreignKey: "id_post_comment" });
+// se exporta los modelos
+module.exports = {
+  ...sequelize.models,
+  sequelize,
+  Op,
+};
